@@ -17,10 +17,48 @@ public static int[][] ticbox;
 		
 		
 		//write your code here !!!
+		int p=0,q=0;
+		for (int i = 0; i < 3; i++)
+		{
+			if(tic[i][0] == 1 && tic[i][1] ==1 && tic[i][2]==1)
+			{
+				p=1;
+			}
+			else if(tic[i][0] == 2 && tic[i][1] ==2 && tic[i][2]==2)
+			{
+				q=1;
+			
+			}
+				
+		}
+		for (int i = 0; i < 3; i++)
+		{
+			if(tic[i][0] == 1 && tic[i][1] ==1 && tic[i][2]==1)
+			{
+				p=1;
+			}
+			else if(tic[i][0] == 2 && tic[i][1] ==2 && tic[i][2]==2)
+			{
+				q=1;
+			
+			}
+				
+		}
+		if((tic[0][0] == 1 && tic[1][1] ==1 && tic[2][2]==1)  || (tic[0][0] == 1 && tic[1][1] ==1 && tic[2][2]==1))
+		{
+			p=1;
+		}
 		
-		
-		
-		return 0;
+		else if((tic[0][0] == 2 && tic[1][1] ==2 && tic[2][2]==2)|| (tic[0][0] == 2 && tic[1][1] ==2 && tic[2][2]==2))
+		{
+			q=1;
+		}
+		if(p==1)
+			return 1;
+		else if(q==1)
+			return 2;
+		else
+			return 0;
 		
 	}
 	
@@ -40,9 +78,15 @@ public static int[][] ticbox;
 		
 		
 		//Write your code here !!!
-		
-		
-		return false;
+		if (a1<3 && a2<3)
+		{
+			if(tic[a1][a2] == 0)
+				return true;
+			else
+				return false;
+		}
+		else
+			return false;
 	}
 	public static void main(String args[]) {
 		
